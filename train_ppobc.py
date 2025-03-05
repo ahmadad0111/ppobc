@@ -239,6 +239,8 @@ for epoch in range(epochs):
         count_step += 1
 
         action_logits_AI_agent, action_AI_agent = sample_action(observation_AI)
+        observation_HM = tf.cast(observation_HM, tf.float32)
+        observation_AI = tf.cast(observation_AI, tf.float32)
 
 
 #         action_logits_bc_agent = bc_model.predict(observation_HM, verbose=0)
